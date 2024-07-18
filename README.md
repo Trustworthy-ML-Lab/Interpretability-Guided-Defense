@@ -17,13 +17,13 @@
 * Adaptive Attack Evaluations: https://github.com/fra31/evaluating-adaptive-test-time-defenses 
 
 ## Cite this work
-A. Kulkarni and T.-W. Weng, "Interpretability-Guided Test-Time Adversarial Defense", ECCV 2024.
+A. Kulkarni and T.-W. Weng, Interpretability-Guided Test-Time Adversarial Defense, ECCV 2024.
 
 ```
-  @inproceedings{kulkarni2024interpretabilityguided,
-      title={Interpretability-Guided Test-Time Adversarial Defense},
-      author={Akshay Kulkarni, and Tsui-Wei Weng},
-      booktitle={European Conference on Computer Vision},
-      year={2024}
-  }
+@inproceedings{kulkarni2024igdefense,
+    title={Interpretability-Guided Test-Time Adversarial Defense},
+    author={Kulkarni, Akshay and Weng, Tsui-Wei},
+    booktitle={European Conference on Computer Vision},
+    year={2024}
+}
 ```
