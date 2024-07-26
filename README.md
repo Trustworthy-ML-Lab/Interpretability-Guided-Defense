@@ -8,7 +8,7 @@
 * We illustrate the overview of our IG-Defense below. For more information about IG-Defense, please check out our [project page](https://lilywenglab.github.io/Interpretability-Guided-Defense/).
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/77826fb2-72e6-4b97-9fc8-f7d14a596792" width="800">
+<img src="https://github.com/user-attachments/assets/9963fa86-1df7-4573-8601-786290b9e1cb" width="800">
 </p>
 
 ## Sources:
