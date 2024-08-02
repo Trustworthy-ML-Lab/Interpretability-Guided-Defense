@@ -7,8 +7,14 @@
   * We also demonstrate improved robustness upto 3.4\%, 3.8\%, and 1.5\% against a wide range of white-box, black-box, and adaptive attacks respectively with the lowest inference time (4x faster) among existing test-time defenses.
 * We illustrate the overview of our IG-Defense below. For more information about IG-Defense, please check out our [project page](https://lilywenglab.github.io/Interpretability-Guided-Defense/).
 
+<!--
 <p align="center">
 <img src="https://github.com/user-attachments/assets/9963fa86-1df7-4573-8601-786290b9e1cb" width="640">
+</p>
+-->
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5cd73bf7-c8c7-4707-8828-a6be5ad21c64" width="900">
 </p>
 
 ## Sources:
