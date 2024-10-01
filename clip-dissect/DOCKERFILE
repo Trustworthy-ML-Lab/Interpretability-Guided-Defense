@@ -1,0 +1,39 @@
+FROM nvidia/cuda:11.3.1-runtime-ubuntu20.04
+
+# Install base utilities
+RUN apt-get update && \
+    apt-get install -y wget && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install miniconda
+ENV CONDA_DIR /opt/conda
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+    /bin/bash ~/miniconda.sh -b -p /opt/conda
+
+# Put conda in path so we can use conda activate
+ENV PATH=$CONDA_DIR/bin:$PATH
+
+# Create the environment:
+RUN conda create --name clipdissect python=3.8
+
+## MAKE ALL BELOW RUN COMMANDS USE THE NEW CONDA ENVIRONMENT
+SHELL ["conda", "run", "-n", "clipdissect", "/bin/bash", "-c"]
+
+# Install basic ubuntu packages
+RUN apt-get update && \
+    apt-get -y install git && \
+    apt-get -y install make && \
+    apt-get -y install g++ && \
+    apt-get -y install unzip
+
+# Install required packages from requirements.txt file
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+RUN conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+
+# setup clipdissect as default terminal environment
+ENV BASH_ENV ~/.bashrc
+SHELL ["/bin/bash", "-c"]
+RUN conda init bash
+RUN echo "conda activate clipdissect" >> ~/.bashrc

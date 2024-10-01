@@ -1,0 +1,14 @@
+numpy
+torch
+torchvision
+foolbox
+gpustat
+ftfy
+regex
+tqdm
+black
+isort
+pandas
+matplotlib
+scipy
+seaborn
